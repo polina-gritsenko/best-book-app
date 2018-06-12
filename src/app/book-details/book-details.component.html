@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nameInput">Name</label>
+      <input type="text" class="form-control" id="nameInput" aria-describedby="bookName" placeholder="Enter book name" formControlName="name"
+        [ngClass]="{'is-invalid': isControlInvalid('name')}">
+      <div *ngIf="isControlInvalid('name')" class="invalid-feedback">
+        <div>Required field</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="authorInput">Author</label>
+      <input type="text" class="form-control" id="authorInput" placeholder="Book author" formControlName="author" [ngClass]="{'is-invalid': isControlInvalid('author')}">
+      <div *ngIf="isControlInvalid('author')" class="invalid-feedback">
+        <div>Required field</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="yearInput">Published</label>
+      <input type="number" class="form-control" id="yearInput" placeholder="Year" formControlName="year" [ngClass]="{'is-invalid': isControlInvalid('year')}">
+      <div *ngIf="isControlInvalid('year')" class="invalid-feedback">
+        <div>Required field</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dateInput">Upload date ( YYYY-MM-DD format )</label>
+      <input type="text" class="form-control" id="dateInput" placeholder="Date" formControlName="addedAt" [ngClass]="{'is-invalid': isControlInvalid('addedAt')}">
+      <div *ngIf="isControlInvalid('addedAt')" class="invalid-feedback">
+        <div>Fill the date or check the format</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="reviewInput">Review</label>
+      <textarea class="form-control" id="reviewInput" rows="3" formControlName="review"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

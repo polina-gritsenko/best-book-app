@@ -1,0 +1,9 @@
+.best-bordered-list>.row {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    .col.best-width-50 {
+        max-width: 50px;
+    }
+    .col.best-width-100 {
+        max-width: 100px;
+    }
+}

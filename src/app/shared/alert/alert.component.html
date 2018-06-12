@@ -1,0 +1,6 @@
+<div *ngIf="isOpen" class="alert" [ngClass]="alertClass" role="alert">
+  {{alertMessage}}
+  <button type="button" class="close" aria-label="Close" (click)="hideAlert()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
